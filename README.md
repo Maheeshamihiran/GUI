@@ -1,2 +1,0 @@
-# GUI
-Fitness Tracker
