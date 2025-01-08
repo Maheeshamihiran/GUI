@@ -1,0 +1,55 @@
+.nutritional-advice {
+     
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f3f1f1;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('backgrounds.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top:60px;
+    width: 96vw;
+    height: 180vh;
+
+  }
+  
+  .nutritional-advice h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .goal-selector {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .goal-selector label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .goal-dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .advice-content {
+    margin-top: 20px;
+  }
+  
+  .advice-content h2 {
+    color: #2c3e50;
+  }
+  
+  .advice-content p {
+    white-space: pre-wrap;
+    color: #090505;
+    line-height: 1.6;
+  }
+  

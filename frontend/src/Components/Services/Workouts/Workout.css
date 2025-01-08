@@ -1,0 +1,74 @@
+
+
+
+.workouts-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('workouts.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 150vh;
+}
+
+.goal-selector {
+    margin: 1rem 0;
+}
+
+.goaldropdown {
+    padding: 0.5rem;
+    font-size: 1rem;
+    position: absolute;
+    left:2%;
+    top:54%;
+     
+    
+}
+.workout-plan-details {
+    background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    color: #000;
+    position: absolute;
+    left:18%;
+   
+    top:200px;
+}
+
+.workout-plan-details h3 {
+    margin-top: 0;
+}
+
+.workout-plan-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.workout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.workout-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+    border-radius: 8px;
+}
+.header{
+text-align: center;
+position: absolute;
+top:60px;
+}
+.lable{
+    position: absolute;
+    left: 3%;
+    top:50%;
+}

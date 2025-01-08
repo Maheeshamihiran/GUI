@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif ;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+    padding: 1rem 2rem;
+    background:  rgba(0, 0, 0, 0.5); /* Change background to black */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    width: 100%; /* Make it span the full width of the page */
+    z-index: 1000; /* Ensure it is above other elements */
+    
+}
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; /* Optional: Set logo color */
+   margin-right: 35rem;
+}
+.navbar .logo span{
+    color: #f73471;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin-left: 2rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff; /* Optional: Set link color */
+}
+.navbar-links a:hover{
+    color: #f73471;
+}
