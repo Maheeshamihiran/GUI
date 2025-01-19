@@ -32,11 +32,6 @@ function Service() {
             <h2>Workout Plans</h2>
             <p>Receive  workouts plan to complement your fitness routine.</p>
           </div></Link>
-          < Link to="/workouts" className="workouts-link">
-          <div className="service-item">
-            <h2>Workout Plans</h2>
-            <p>Receive  workouts plan to complement your fitness routine.</p>
-          </div></Link>
           
 
         </div>
