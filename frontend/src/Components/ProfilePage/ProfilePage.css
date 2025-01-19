@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif ;
+}
+.profile-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url("bg profile.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 98.9vw;
+    height: 140vh;
+}
+
+
+
+.profile-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background:rgba(255,255,255,0.9);
+    width: 400px;
+    top: 75px;
+    position: absolute;
+    
+
+    
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .profile-details {
+    text-align: center;
+  }
+  
+  .profile-details label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .profile-details input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f73471;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #982b4e;
+  }
+  

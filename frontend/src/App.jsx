@@ -9,7 +9,8 @@ import Service from './Components/Services/Service/Service';
 import RegistrationForm from './Components/Services/RegistrationForm';
 import Nutritional from './Components/Services/Nutritional Advice/Nutritional';
 import Workouts from './Components/Services/Workouts/Workouts';
-
+import ProfilePage from './Components/ProfilePage/ProfilePage';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -24,7 +25,11 @@ function App() {
         <Route path="/registration" element={<RegistrationForm />} />
         <Route path="/nutritional" element={<Nutritional />} />
         <Route path="/workouts" element={<Workouts />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/contact" element={<Contact />} />
+        
       </Routes>
+     
     </Router>
   );
 }

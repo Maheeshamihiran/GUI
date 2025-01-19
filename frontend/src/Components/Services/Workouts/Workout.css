@@ -1,74 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
 .workouts-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('workouts.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('family-with-dumbbells-pic.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  width: 95vw;
 }
 
-.goal-selector {
-    margin: 1rem 0;
+.workouts-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000; /* Set text color to black for better readability */
+  max-width: 800px;
+  width: 100%;
+  text-align: center; /* Center the text */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
 }
 
-.goaldropdown {
-    padding: 0.5rem;
-    font-size: 1rem;
-    position: absolute;
-    left:2%;
-    top:54%;
-     
-    
-}
-.workout-plan-details {
-    background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    text-align: left;
-    color: #000;
-    position: absolute;
-    left:18%;
-   
-    top:200px;
+.goal-selector, .day-selector {
+  margin-bottom: 20px;
 }
 
-.workout-plan-details h3 {
-    margin-top: 0;
+.calendar-container-2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center the calendar */
+  width: 100%;
 }
 
-.workout-plan-details ul {
-    list-style-type: none;
-    padding: 0;
+.workout-plan {
+  margin-top: 20px;
 }
 
-.workout-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+.workout-day {
+  margin-bottom: 20px;
 }
 
-.workout-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 1rem;
-    border-radius: 8px;
+.workout-day h2 {
+  font-size: 2em; /* Adjust the font size to match h2 */
+  margin-bottom: 10px;
 }
-.header{
-text-align: center;
-position: absolute;
-top:60px;
+
+.workout-day h3 {
+  font-size: 1.5em; /* Adjust the font size to match h3 */
+  margin-bottom: 10px;
 }
-.lable{
-    position: absolute;
-    left: 3%;
-    top:50%;
+
+.workout-day p {
+  white-space: pre-line; /* Preserve line breaks in the text */
+}
+
+.exercise {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exercise-image {
+  width: 20%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.exercise-text {
+  flex: 1;
+}
+
+.exercise-text strong {
+  font-weight: bold;
+  color: #ff6347; /* Highlight color */
 }

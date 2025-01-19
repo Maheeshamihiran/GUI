@@ -17,11 +17,7 @@ export default function LoginCard(){
           
           <form>
             <input type="email"   placeholder="Your Email" className="login-input" onChange={(e)=>setusername(e.target.value)}/>
-            <input
-              type="password"
-              placeholder="Password"
-              className="login-input"
-              onChange={(e)=>setpassword(e.target.value)}
+            <input type="password" placeholder="Password" className="login-input" onChange={(e)=>setpassword(e.target.value)}
 
             />
             <button type="submit" className="loginbutton">

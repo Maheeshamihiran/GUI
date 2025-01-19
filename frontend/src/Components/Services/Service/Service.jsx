@@ -14,23 +14,30 @@ function Service() {
         <div className="service-list">
            <Link to="/registration" className="registration-link">
             <div className="service-item"> 
-            <h2>Register Member</h2>
-            <p>Get one-on-one training sessions with our certified trainers to help you reach your fitness goals.</p>
+            <h2>Get Your Personal Workouts plan(Join With Our Gym) </h2>
+            <p>Receive personalized workouts plan to complement your fitness routine.</p>
+
           </div> </Link>
           {/* <div className="service-item">
             <h2>Reserve Equipment</h2>
             <p>Join our group classes for a fun and motivating workout experience.</p>
           </div> */}
           < Link to="/nutritional" className="nutritional-link">
-          <div className="service-items">
+          <div className="service-item">
             <h2>Nutritional Advice</h2>
-            <p>Receive personalized nutritional advice to complement your fitness routine.</p>
+            <p>Receive  nutritional advice to complement your fitness routine.</p>
           </div> </Link>
           < Link to="/workouts" className="workouts-link">
           <div className="service-item">
             <h2>Workout Plans</h2>
-            <p>Receive personalized nutritional advice to complement your fitness routine.</p>
+            <p>Receive  workouts plan to complement your fitness routine.</p>
           </div></Link>
+          < Link to="/workouts" className="workouts-link">
+          <div className="service-item">
+            <h2>Workout Plans</h2>
+            <p>Receive  workouts plan to complement your fitness routine.</p>
+          </div></Link>
+          
 
         </div>
         

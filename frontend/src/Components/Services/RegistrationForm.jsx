@@ -1,16 +1,14 @@
 
 import React, { useState } from 'react';
-import './RegistrationForm.css';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-
-
+import './RegistrationForm.css'; // Import the custom CSS file
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     age: '',
-    phone: '',
+    gender: 'choose',
     dateOfBirth: '',
     fitnessGoal: '',
     medicalConditions: '',
@@ -22,7 +20,8 @@ const RegistrationForm = () => {
     preferredTrainer: '',
     
   });
-  const [value, setValue] = useState(new Date());
+  const [date, setDate] = useState(new Date());
+  const onChange = (newDate) => { setDate(newDate); };
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = (e) => {
@@ -58,8 +57,12 @@ const RegistrationForm = () => {
       </div>
 
       <div className="form-group">
-        <label>Phone Number:</label>
-        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required/>
+        <label>Gender:</label>
+        <select  name="geder" value={formData.gender} onChange={handleChange}>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        
+        </select>
       </div>
 
       <div className="form-group">
@@ -105,8 +108,9 @@ const RegistrationForm = () => {
       <div className="form-group">
         <label>Membership Type:</label>
         <select name="membershipType" value={formData.membershipType}onChange={handleChange}>
-        <option value="Free Trial">Free Trial</option>
+          
         <option value="Monthly">Monthly</option>
+        <option value="Three Month"> Three Monthly</option>
         <option value="Annual">Annual</option>
         </select>
       </div>
@@ -139,7 +143,8 @@ const RegistrationForm = () => {
             </div>
       </form>
       <div className='calender-container'>
-       <Calendar onChange={setValue} value={value} /> 
+      <Calendar onChange={onChange} value={date} />
+       <p>Slected Date: {date.toDateString()}</p>
        </div>
        
     </div>

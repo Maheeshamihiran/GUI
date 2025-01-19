@@ -7,15 +7,20 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('family-with-dumbbells-pic.jpg');
     background-size: cover;
     background-position: center;
-    color: #fff; /* Set text color to white */
+    color: #fff;  
     padding: 2rem;
     text-align: center;
-}
+    width: 94.9vw;
+} 
 
 .login-box-1{
-    background: rgba(0, 0, 0, 0.8); /* White background with some transparency */
-    padding: 2rem;
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.8); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+    border-radius: 20px;
+    width:80%;
+    height: 60%;
+} 
+
+
+  
