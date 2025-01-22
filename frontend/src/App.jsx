@@ -11,14 +11,15 @@ import Nutritional from './Components/Services/Nutritional Advice/Nutritional';
 import Workouts from './Components/Services/Workouts/Workouts';
 import ProfilePage from './Components/ProfilePage/ProfilePage';
 import Contact from './Components/Contact/Contact';
+import Achievement from './Components/Services/Achievement/Achievement';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Body />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Body />} />
+        <Route path="/" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/services" element={<Service />} />
@@ -27,6 +28,7 @@ function App() {
         <Route path="/workouts" element={<Workouts />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/achievement" element={<Achievement/>} />
         
       </Routes>
      

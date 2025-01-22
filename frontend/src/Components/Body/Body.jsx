@@ -14,7 +14,7 @@ function Body() {
             Stay Committed, Stay Strong, And Watch Yourself Grow. Our App Is Designed To Help You Track Your Progress, Reach Your Goals, And Push Your Limits. Whether You're Just Starting Out Or You're A Seasoned Athlete, Every Step You Take Brings You Closer To Your Best Self. Get Inspired, Stay Motivated, And Make Each Workout Count. Your Fitness Journey Starts Here—Let's Crush It Together!
           </p>
           <div className="buttons">
-          <Link to="/login" className="btn">Get Start</Link>
+          <Link to="/services" className="btn">Get Start</Link>
           </div>
         </div>
       </header>

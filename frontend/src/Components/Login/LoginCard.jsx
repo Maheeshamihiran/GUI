@@ -7,8 +7,17 @@ export default function LoginCard(){
     const [username,setusername]=useState('');
     const [password,setpassword]=useState('');
 
+
     console.log(username);
     console.log(password);
+
+    // async function handleclick(){
+    //   try{
+    //     const response = await axios.post('http://localhost:3001/login',{username,password});
+    //     if(response.data.success){
+    //       alert('login successful');
+    //   }
+    // }
 
    return(
     <div>

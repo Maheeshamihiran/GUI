@@ -14,7 +14,7 @@ function Service() {
         <div className="service-list">
            <Link to="/registration" className="registration-link">
             <div className="service-item"> 
-            <h2>Get Your Personal Workouts plan(Join With Our Gym) </h2>
+            <h2>(Join With Our Gym) </h2>
             <p>Receive personalized workouts plan to complement your fitness routine.</p>
 
           </div> </Link>
@@ -32,6 +32,12 @@ function Service() {
             <h2>Workout Plans</h2>
             <p>Receive  workouts plan to complement your fitness routine.</p>
           </div></Link>
+          <Link to="/achievement" className="achievement-link">
+          <div className="service-item">
+            <h2>Track Achievements</h2>
+            <p>Track your daily water intake and workout performance.</p>
+          </div>
+        </Link>
           
 
         </div>

@@ -17,11 +17,11 @@
 }
 
 .HomePage-header {
-    text-align: center; /* Center text */
+    text-align: center; 
 }
 
 .content {
-    max-width: 1600px; /* Optional: Limit the width of the content */
+    max-width: 1600px; 
     padding: 2rem;
 }
 

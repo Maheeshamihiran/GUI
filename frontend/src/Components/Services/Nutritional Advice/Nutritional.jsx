@@ -1,5 +1,6 @@
 import React from 'react';
 import './Nutritional.css';
+import { Link } from 'react-router-dom';
 import { useState } from 'react'
 
 const Nutritional = () => {
@@ -143,6 +144,9 @@ const Nutritional = () => {
             <option value="improveFlexibility">Improve Flexibility</option>
             <option value="genaral">Genaral</option>
           </select>
+          <Link to={`/achievement?goal=${goal}`} className="achievement-link">
+        <button>Track Achievements</button>
+      </Link>
         </div>
         <div className="advice-content">
           <h2>{advice[goal].title}</h2>
