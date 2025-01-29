@@ -1,50 +1,55 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Service.css';
 
-import { Link } from 'react-router-dom';
-
-function Service() {
+function Dashboard() {
   return (
-    <div className="service-page">
-      <div className="service-container">
-        <h1 className="service-title">Our Services</h1>
-        <p className="service-description">
-          At FITNEZZ, we offer a wide range of services to help you achieve your fitness goals. Whether you're looking for personal training, group classes, or nutritional advice, we have something for everyone.
-        </p>
+    <div className="dashboard-container">
+      {/* Sidebar */}
+      <aside className="sidebar">
+        <h2 className="logo">FITNEZZ</h2>
+        <nav>
+          <ul className="nav-table">
+            <li><Link to="/services">Dashboard</Link></li>
+            <li><Link to="/home">Site Home</Link></li>
+            <li><Link to="/registration">Join Our Gym</Link></li>
+            <li><Link to="/nutritional">Nutritional Advice</Link></li>
+            <li><Link to="/workouts">Workout Plans</Link></li>
+            <li><Link to="/achievement">Track Achievements</Link></li>
+            <li><Link to="/Login">Login</Link></li>
+            <li><Link to="/Profile">Profile</Link></li>
+          </ul>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className="main-content">
+        <h1 className="section-title">DASHBOARD</h1>
         <div className="service-list">
-           <Link to="/registration" className="registration-link">
-            <div className="service-item"> 
-            <h2>(Join With Our Gym) </h2>
-            <p>Receive personalized workouts plan to complement your fitness routine.</p>
-
-          </div> </Link>
-          {/* <div className="service-item">
-            <h2>Reserve Equipment</h2>
-            <p>Join our group classes for a fun and motivating workout experience.</p>
-          </div> */}
-          < Link to="/nutritional" className="nutritional-link">
-          <div className="service-item">
+          <Link to="/registration" className="service-item">
+          <img src="Join Our Gym.jpg" alt="Track Achievements" />
+            <h2>Join Our Gym</h2>
+            <p>Receive personalized workout plans.</p>
+          </Link>
+          <Link to="/nutritional" className="service-item">
+          <img src="nutrition-trainer.webp" alt="Track Achievements" />
             <h2>Nutritional Advice</h2>
-            <p>Receive  nutritional advice to complement your fitness routine.</p>
-          </div> </Link>
-          < Link to="/workouts" className="workouts-link">
-          <div className="service-item">
+            <p>Get expert nutritional guidance.</p>
+          </Link>
+          <Link to="/workouts" className="service-item">
+          <img src="Workouts.jpg" alt="Track Achievements" />
             <h2>Workout Plans</h2>
-            <p>Receive  workouts plan to complement your fitness routine.</p>
-          </div></Link>
-          <Link to="/achievement" className="achievement-link">
-          <div className="service-item">
+            <p>Access customized workout routines.</p>
+          </Link>
+          <Link to="/achievement" className="service-item">
+          <img src="Track Achievements.jpg" alt="Track Achievements" />
             <h2>Track Achievements</h2>
-            <p>Track your daily water intake and workout performance.</p>
-          </div>
-        </Link>
-          
-
+            <p>Monitor progress and performance.</p>
+          </Link>
         </div>
-        
-      </div>
+      </main>
     </div>
   );
 }
 
-export default Service;
+export default Dashboard;
