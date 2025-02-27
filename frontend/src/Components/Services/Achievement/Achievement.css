@@ -1,0 +1,55 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.achievement-page {
+  
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+ 
+}
+
+.achievement-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+ 
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.achievement-item {
+ 
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1.2em;
+  margin: 10px;
+  padding: 15px;
+  
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+ 
+}
+
+.achievement-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.achievement-item:hover {
+  background-color: #f0f0f0;
+}

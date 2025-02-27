@@ -1,0 +1,125 @@
+/* About.css */
+
+.what-we-do-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #73c6b6;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  max-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color:#73c6b6 ;
+}
+
+.column p {
+  font-size: 16px;
+}
+
+  .HEading{
+    text-align: center;
+    font-size: 30px;
+
+  }
+  
+  .login-box-1 {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vw;
+  
+    background:  url('hero-about-ace.jpg');
+    background-size: cover;
+    background-position: top;
+    color: #fff;}
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  
+  .mission-image {
+    width: 50%;
+    height: 500px;
+  }
+  
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height:500px;
+  }
+  
+  .red-bg {
+    background-color: #d9534f;
+    color: white;
+    text-align: center;
+  }
+  
+  .about-text {
+    max-width: 600px;
+  }
+  
+  .mission-paragraph {
+    color: white;
+    font-size: 16px;
+  }
+  
+  .about-button {
+    background: white;
+    color: #d9534f;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  
+  
+ 
+  
+  .dark-bg {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    
+  }
+
+   
+  .lightgreen-bg {
+    background-color: #73c6b6;
+    color: white;
+    text-align: center;
+    
+  }
