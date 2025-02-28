@@ -90,7 +90,7 @@
   .remove-button {
     background: none;
     border: none;
-    color: #dc2c3d;
+    color: #d42e3e;
     cursor: pointer;
     font-size: 14px;
   }
@@ -102,7 +102,7 @@
   
   .no-exercises {
     padding: 15px;
-    color: #868686;
+    color: #666;
     font-style: italic;
   }
   
