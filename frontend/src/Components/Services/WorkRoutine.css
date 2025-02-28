@@ -90,13 +90,13 @@
   .remove-button {
     background: none;
     border: none;
-    color: #dc3545;
+    color: #d42e3e;
     cursor: pointer;
     font-size: 14px;
   }
   
   .remove-button:hover {
-    color: #bd2130;
+    color: #cb2838;
     text-decoration: underline;
   }
   
