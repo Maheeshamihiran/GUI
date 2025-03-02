@@ -23,8 +23,8 @@ const SignUp = () => {
 
         try {
             const member = {
-                first_name: mem_firstname,
-                last_name: mem_lastname,
+                firstName: mem_firstname,
+                lastName: mem_lastname,
                 email: mem_email,
                 password: mem_password,
                 goal: '',
@@ -33,14 +33,14 @@ const SignUp = () => {
                 height: 0.0,
             };
 
-            const response = await axios.post('http://localhost:5000/api/signup', member);
+            const response = await axios.post('http://localhost:5003/api/users/register', member);
 
-            if (response.data.token) {
+            if (response.data) {
                 setSuccess('Signup successful! Redirecting to login...');
                 setError('');
 
                 setTimeout(() => {
-                    navigate('/home');
+                    navigate('/login');
                 }, 2000);
             }
         } catch (err) {

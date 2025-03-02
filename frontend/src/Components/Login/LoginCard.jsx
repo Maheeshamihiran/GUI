@@ -13,17 +13,17 @@ export default function LoginCard() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/api/login', {
+            const response = await axios.post('http://localhost:8080/api/users/login', {
                 email,
                 password,
             });
 
-            if (response.data.token) {
-                localStorage.setItem('token', response.data.token);
-                navigate('/home'); // Redirect to dashboard or home page
+            if (response.data) {
+                localStorage.setItem('user', JSON.stringify(response.data));
+                navigate('/home');
             }
         } catch (err) {
-            setError(err.response?.data?.message || 'Login failed. Please try again.');
+            setError(err.response?.data?.message || 'Invalid email or password.');
         }
     };
 
