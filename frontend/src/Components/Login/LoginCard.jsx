@@ -1,43 +1,68 @@
+import React, { useState } from 'react';
+import './LoginCard.css';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-import { useState } from 'react'
-import './LoginCard.css'
-import { Link } from 'react-router-dom';
-export default function LoginCard(){
-  
-    const [username,setusername]=useState('');
-    const [password,setpassword]=useState('');
+export default function LoginCard() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    console.log(username);
-    console.log(password);
+        try {
+            const response = await axios.post('http://localhost:5000/api/login', {
+                email,
+                password,
+            });
 
-    // async function handleclick(){
-    //   try{
-    //     const response = await axios.post('http://localhost:3001/login',{username,password});
-    //     if(response.data.success){
-    //       alert('login successful');
-    //   }
-    // }
+            if (response.data.token) {
+                localStorage.setItem('token', response.data.token);
+                navigate('/home'); // Redirect to dashboard or home page
+            }
+        } catch (err) {
+            setError(err.response?.data?.message || 'Login failed. Please try again.');
+        }
+    };
 
-   return(
-    <div>
-       <div className="login-box">
-          <h1 className="login-title">Login Here</h1>
-          
-          <form>
-            <input type="email"   placeholder="Your Email" className="login-input" onChange={(e)=>setusername(e.target.value)}/>
-            <input type="password" placeholder="Password" className="login-input" onChange={(e)=>setpassword(e.target.value)}
+    return (
+        <div>
+            <div className="login-box">
+                <h1 className="login-title">Login Here</h1>
 
-            />
-            <button type="submit" className="loginbutton">
-              Login
-            </button>
-          </form>
-          <p className="signup-text">
-            Don't have an account?<br></br> <Link to="/signup" className="signup-link">Sign up here</Link>
-          </p>
-          
+                {error && <p className="error-message">{error}</p>}
+
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        className="login-input"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        className="login-input"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button type="submit" className="loginbutton">
+                        Login
+                    </button>
+                </form>
+
+                <p className="signup-text">
+                    Don't have an account?<br />{' '}
+                    <Link to="/signup" className="signup-link">
+                        Sign up here
+                    </Link>
+                </p>
+            </div>
         </div>
-    </div>
-   )
+    );
 }
