@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Body from './Components/Body/Body';
 import Login from './Components/Login/Login';
@@ -16,10 +17,15 @@ import WorkRoutine from './Components/Services/WorkRoutine';
 import Calarieintake from './Components/Services/Calarieintake/Calarieintake';
 import Progress from './Components/Services/Progress/Progress';
 
-function App() {
+// Create a component to handle conditional navbar rendering
+const AppContent = () => {
+  const location = useLocation();
+  const hideNavbarPaths = ['/', '/signup'];
+  const shouldShowNavbar = !hideNavbarPaths.includes(location.pathname);
+
   return (
-    <Router>
-      <Navbar />
+    <>
+      {shouldShowNavbar && <Navbar />}
       <Routes>
         <Route path="/home" element={<Body />} />
         <Route path="/" element={<Login />} />
@@ -35,9 +41,15 @@ function App() {
         <Route path="/work-routinet" element={<WorkRoutine/>} />
         <Route path="/calarie-intake" element={<Calarieintake/>} />
         <Route path="/progress-monitoring" element={<Progress/>} />
-        
       </Routes>
-     
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
