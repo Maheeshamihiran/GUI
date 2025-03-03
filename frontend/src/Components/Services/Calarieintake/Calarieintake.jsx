@@ -8,9 +8,14 @@ const Calorieintake= () => {
   const [proteins, setProteins] = useState('');
   const [carbs, setCarbs] = useState('');
   const [fats, setFats] = useState('');
+  const [date, setDate] = useState('');
 
   const handleLogMeal = () => {
     if (mealName && calories) {
+      const currentDate = new Date().toISOString().split('T')[0]; 
+      const currentTime = new Date().toLocaleTimeString(); 
+
+ 
       setMeals([
         ...meals,
         {
@@ -19,7 +24,9 @@ const Calorieintake= () => {
           calories: calories,
           proteins: proteins,
           carbs: carbs,
-          fats: fats
+          fats: fats,
+          date:currentDate,
+          time: currentTime
         }
       ]);
       // Reset form fields
@@ -28,6 +35,7 @@ const Calorieintake= () => {
       setProteins('');
       setCarbs('');
       setFats('');
+      setDate('');
     }
   };
 
@@ -38,6 +46,10 @@ const Calorieintake= () => {
   return (
     <div className="calorie-container">
       <h1 className="calorie-title">2. Calorie Intake</h1>
+
+
+
+      
       
       <div className="form-group">
         <label className="form-label">Meal Name:</label>
@@ -48,6 +60,8 @@ const Calorieintake= () => {
           className="form-input"
         />
       </div>
+
+      
       
       <div className="form-group">
         <label className="form-label">Calories:</label>
@@ -104,8 +118,11 @@ const Calorieintake= () => {
           <ul className="meal-list">
             {meals.map((meal) => (
               <li key={meal.id} className="meal-item">
+                
                 <div className="meal-details">
                   <div className="meal-name">{meal.name}</div>
+                  <div className="meal-date">{meal.date} at {meal.time}</div>
+
                   <div className="meal-metadata">
                     <span>Calories: {meal.calories} | </span>
                     {meal.proteins && <span>Proteins: {meal.proteins}g | </span>}

@@ -4,8 +4,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
  function SignUp()  {
-    const [firstName, setFirstName] = useState();
-    const [lastName, setLastName] = useState();
+    const [firstname, setFirstName] = useState();
+    const [lastname, setLastName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const navigate = useNavigate();
@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom';
         e.preventDefault();
         axios.post('http://localhost:5000/signup', {firstname, lastname, email, password})
         .then(result => console.log(result))
-        .then(() => navigate('/login'))
+        .then(() => navigate('/'))
         .then(() => alert("Sign-up successful"))
         .catch(err => console.log(err))
           

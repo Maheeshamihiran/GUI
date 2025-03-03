@@ -8,9 +8,14 @@ const WorkRoutine = () => {
   const [sets, setSets] = useState('');
   const [reps, setReps] = useState('');
   const [duration, setDuration] = useState('');
+  const [date, setDate] = useState('');
+
 
   const handleAddExercise = () => {
     if (exerciseName) {
+      const currentDate = new Date().toISOString().split('T')[0]; 
+      const currentTime = new Date().toLocaleTimeString(); 
+
       setExercises([
         ...exercises,
         {
@@ -18,7 +23,10 @@ const WorkRoutine = () => {
           name: exerciseName,
           sets: sets,
           reps: reps,
-          duration: duration
+          duration: duration,
+          date:currentDate,
+          time: currentTime
+
         }
       ]);
       // Reset form fields
@@ -26,6 +34,7 @@ const WorkRoutine = () => {
       setSets('');
       setReps('');
       setDuration('');
+      setDate('');
     }
   };
 
@@ -94,6 +103,7 @@ const WorkRoutine = () => {
               <li key={exercise.id} className="exercise-item">
                 <div className="exercise-details">
                   <div className="exercise-name">{exercise.name}</div>
+                  <div className="meal-date">{exercise.date} at {exercise.time}</div>
                   <div className="exercise-metadata">
                     {exercise.sets && <span>Sets: {exercise.sets} | </span>}
                     {exercise.reps && <span>Reps: {exercise.reps} | </span>}
