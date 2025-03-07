@@ -137,7 +137,7 @@ const Nutritional = () => {
   return (
     <div className="nutritional-container">
       <h1>Nutritional Advice</h1>
-      <h2>Select your Goal (We give nutrional-advice for Achive your goal) </h2>
+      <h2>Select your Goal (We give nutrional-advice for Achieve your goal) </h2>
       <div className="goal-container">
         {Object.keys(advice).map((goal) => (
           <div

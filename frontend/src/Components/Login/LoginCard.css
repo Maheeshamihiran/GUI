@@ -65,3 +65,10 @@
     margin-top: 20px;
     font-size: 16px;
 }
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
